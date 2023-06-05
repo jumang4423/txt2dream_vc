@@ -126,7 +126,10 @@ async def main():
     prompt_words = get_prompt_words()
     if prompt_words == []:
         err_print("no words given")
+        err_print("please give some words as arguments")
+        err_print("ex) python3 run.py dream rainbow unicorn")
         exit(1)
+
     info_print("prompt words: " + str(prompt_words))
     basic_print("generating prompt...")
     prompt = gen_words_to_prompts(prompt_words)
